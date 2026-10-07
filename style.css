@@ -1,110 +1,200 @@
-/* Element selector */
+/* WEEK 3 - VISUAL DESIGN*/
+
+/* Color Palette */
+:root {
+--background: #F4F7F6;
+--dark: #1F3A3D;
+--green: #2E7D5B;
+--light-green: #E8F5E9;
+--white: #FFFFFF;
+--border: #D6DEDC;
+--text: #333333;
+}
+
+/* Page */
 body {
-font-family: Arial, sans-serif;
-background-color: #f4f6f8;
+font-family: "DM Sans", sans-serif;
+background-color: var(--background);
+color: var(--text);
 margin: 0;
 padding: 30px;
+line-height: 1.6;
 }
 
-/* Element selector */
+/* Main Heading */
 h1 {
-color: #2c3e50;
+font-family: "Playfair Display", serif;
+color: var(--dark);
+text-align: center;
+margin: 0;
 }
 
-/* ID selector */
-#add-expense {
-background-color: white;
-padding: 20px;
-margin-top: 20px;
-border: 1px solid #ddd;
-border-radius: 8px;
-}
-
-/* Class selector */
-.expenses-section {
-background-color: #e8f5e9;
-padding: 20px;
-margin-top: 20px;
-border: 1px solid #c8e6c9;
-border-radius: 8px;
-}
-
-/* Element selector */
-input {
+/* Budget tracker icon */
+body > img {
 display: block;
-width: 300px;
-padding: 10px;
-margin-top: 5px;
-margin-bottom: 15px;
+margin: 15px auto;
 }
-/* Week 2 - Form styling */
+
+/* Introduction paragraph */
+body > p {
+text-align: center;
+margin-bottom: 30px;
+}
+
+/* Add Expense Card */
+#add-expense {
+background-color: var(--white);
+padding: 25px;
+margin: 20px auto;
+border: 1px solid var(--border);
+border-radius: 12px;
+max-width: 700px;
+box-shadow: 0 3px 10px rgba(31, 58, 61, 0.08);
+}
+
+/* Section headings */
+h2 {
+font-family: "Playfair Display", serif;
+color: var(--dark);
+margin-top: 0;
+}
+
+/* Form */
+form {
+display: flex;
+flex-direction: column;
+}
+
+/* Labels */
+label {
+font-weight: 600;
+margin-top: 10px;
+margin-bottom: 5px;
+}
+
+/* Inputs and dropdown */
+input,
 select {
-    display: block;
-    width: 300px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+font-family: "DM Sans", sans-serif;
+width: 100%;
+box-sizing: border-box;
+padding: 12px;
+margin-bottom: 12px;
+border: 1px solid var(--border);
+border-radius: 7px;
+background-color: #FAFCFB;
+font-size: 15px;
 }
 
-/* Week 2 - Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-/* Descendant selector */
-.expenses-section th,
-.expenses-section td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-/* Colored table header */
-.expenses-section th {
-    background-color: #2c3e50;
-    color: white;
-}
-
-/* Position pseudo-class */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Hover effect */
-tr:hover {
-    background-color: #d9f2d9;
-}
-
-/* Direct child selector */
-#add-expense > form {
-    padding: 10px;
-}
-
-/* Negation pseudo-class */
-input:not([type="date"]) {
-    background-color: #fafafa;
-}
-
-/* Focus state */
+/* Input focus */
 input:focus,
 select:focus {
-    outline: none;
-    border: 2px solid #2c3e50;
+outline: none;
+border-color: var(--green);
+box-shadow: 0 0 0 3px rgba(46, 125, 91, 0.12);
 }
 
 /* Button */
 button {
-    padding: 10px 20px;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+font-family: "DM Sans", sans-serif;
+background-color: var(--green);
+color: var(--white);
+border: none;
+padding: 12px 20px;
+margin-top: 8px;
+border-radius: 7px;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
 }
 
 /* Button hover */
 button:hover {
-    background-color: #1a252f;
+background-color: var(--dark);
+}
+
+/* Expenses Card */
+.expenses-section {
+background-color: var(--white);
+padding: 25px;
+margin: 20px auto;
+border: 1px solid var(--border);
+border-radius: 12px;
+max-width: 900px;
+box-shadow: 0 3px 10px rgba(31, 58, 61, 0.08);
+}
+
+/* Table */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 15px;
+}
+
+/* Table cells */
+.expenses-section th,
+.expenses-section td {
+border: 1px solid var(--border);
+padding: 12px;
+text-align: left;
+}
+
+/* Table header */
+.expenses-section th {
+background-color: var(--dark);
+color: var(--white);
+font-weight: 600;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+background-color: var(--light-green);
+}
+
+/* Row hover */
+tr:hover {
+background-color: #D4EBDD;
+}
+
+/* Details section */
+details {
+max-width: 900px;
+margin: 20px auto;
+padding: 15px 20px;
+background-color: var(--white);
+border: 1px solid var(--border);
+border-radius: 10px;
+}
+
+/* Summary */
+summary {
+color: var(--green);
+font-weight: 600;
+cursor: pointer;
+}
+
+/* Video */
+iframe {
+display: block;
+max-width: 100%;
+margin: 25px auto;
+border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+body {
+padding: 15px;
+}
+
+table {
+    font-size: 14px;
+}
+
+.expenses-section,
+#add-expense {
+    padding: 18px;
+}
+
+
 }
